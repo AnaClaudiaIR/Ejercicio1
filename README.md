@@ -1,1 +1,1 @@
-Ejemplo de un botón en JavaFX.
+Ejemplo de un botón que muestra un mensaje al hacer clic sobre él en JavaFX.
