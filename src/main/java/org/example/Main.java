@@ -2,26 +2,32 @@ package org.example;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import java.awt.*;
+//import java.awt.*;
+//import java.awt.TextField; --> No se necesitan estos imports
+import javafx.scene.control.*;
+
+import java.util.Optional;
+
 
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
-        Button button1 = new Button("Haz clic aquí"); //Crear el botón
-        button1.setOnAction(event -> System.out.println("Has pulsado el botón")); //Evento que debe ocurrir al pulsar el botón
-        HBox hbox = new HBox(button1); //Colocar el botón
-        hbox.setSpacing(10);
-        Scene scene = new Scene(hbox, 300, 250); //ventana y que elementos tiene
+        primaryStage.setTitle("Botón"); //Nombre ventana
+        Label label = new Label("Botón ejemplo"); //Mensaje información
+        Button boton = new Button("Haz clic aquí"); //Botón
 
-        primaryStage.setTitle("Aplicación hacer click en el botón"); //nombre de la ventana
-        primaryStage.setScene(scene); //ejecutar la escena
-        primaryStage.show();
+        VBox vBox = new VBox(label,boton); //Caja donde meter los elementos
+
+        Scene scene = new Scene(vBox,200,100); //Ventana
+        primaryStage.setScene(scene); //Colocar la ventana en la escena
+        primaryStage.show(); //Mostrar la escena
     }
-
     public static void main(String[] args) {
         launch(args);
     }
