@@ -28,6 +28,7 @@ public class Main extends Application {
         primaryStage.setScene(scene); //Colocar la ventana en la escena
         primaryStage.show(); //Mostrar la escena
     }
+
     public static void main(String[] args) {
         launch(args);
     }
